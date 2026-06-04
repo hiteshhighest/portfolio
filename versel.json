@@ -2,12 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "install.sh",
-      "use": "@vercel/static-build"
-    },
-    {
       "src": "portfolio/wsgi.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
     }
   ],
   "routes": [
