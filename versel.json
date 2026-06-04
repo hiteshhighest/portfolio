@@ -1,11 +1,12 @@
 {
   "builds": [
     {
+      "src": "vercel-build.sh",
+      "use": "@vercel/static-build"
+    },
+    {
       "src": "portfolio/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.11"
-      }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
