@@ -9,7 +9,7 @@ EMAIL_HOST_USER = "hiteshhighest122@gmail.com"
 
 DEBUG = False
 
-EMAIL_HOST_PASSWORD="vpphexaxszfxtwsf"
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 
 ALLOWED_HOSTS = ["*"]
 
