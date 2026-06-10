@@ -2,10 +2,15 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
+
+DEBUG = os.getenv("DEBUG", "False") == "True"
+
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
