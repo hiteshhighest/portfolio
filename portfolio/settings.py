@@ -7,11 +7,11 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = "django-insecure-qpxl&_mui9d#xq_4vdqq=$y^3%@z@b!q-+cm$96h=%)e#4q5j3"
+EMAIL_HOST_USER = "hiteshhighest122@gmail.com"
 
-DEBUG = os.getenv("DEBUG", "False") == "True"
+DEBUG = False
 
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 ALLOWED_HOSTS = ["*"]
