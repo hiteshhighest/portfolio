@@ -1,0 +1,445 @@
+/* Core Styling & Custom Properties */
+:root {
+    --bg-color: #050508;
+    --card-bg: rgba(255, 255, 255, 0.02);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-primary: #ffffff;
+    --text-secondary: #8a8a93;
+    --accent: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.success {
+    /* Position at the top center of the screen */
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    /* Layout */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 22px;
+    border-radius: 100px;
+    
+    /* Your UI Theme Variables + Glassmorphism */
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* Typography */
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+
+    /* Drop shadow and subtle green glow */
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 
+                0 0 30px rgba(16, 185, 129, 0.08);
+
+    /* Entrance animation */
+    animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Green Circular Wrapper for the Tick */
+.success .success-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background: rgba(16, 185, 129, 0.15); /* Subtle green tint */
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Tick Mark Styling */
+.success .success-icon-wrapper svg {
+    width: 12px;
+    height: 12px;
+    color: #10b981; /* Vibrant Emerald Green */
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+    from {
+        transform: translateX(-50%) translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 3D Fixed Canvas Background */
+#webgl-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Scrollable Container Layer */
+.portfolio-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+/* Navigation - Now Responsive */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(5, 5, 8, 0.4);
+}
+
+.navbar .logo {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* Section Framework - Scaled padding for varying displays */
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 5%;
+}
+
+/* Glassmorphism Containers with fluid sizing */
+.content-box {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.hero-box {
+    margin-top: 2rem;
+}
+
+.wide-box { max-width: 900px; }
+.form-box { max-width: 550px; }
+
+/* Responsive Typography */
+.badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    border: 1px solid var(--card-border);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    margin-bottom: 1.2rem;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem); /* Dynamically scales text down seamlessly on screens */
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 1.2rem;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    background: var(--text-primary);
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(255,255,255,0.15);
+}
+
+/* About Grid Layout System */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+}
+
+.photo-card {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 340px;
+    justify-self: center;
+}
+
+.photo-inner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateZ(20px) scale(0.95);
+    border-radius: 14px;
+    background: #111;
+}
+
+.frame-glow {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Academic lists details */
+.info-list {
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--card-border);
+    font-size: 0.95rem;
+}
+
+.info-item .label {
+    color: var(--text-secondary);
+}
+
+.info-item .val {
+    font-weight: 600;
+    text-align: right;
+    padding-left: 1rem;
+}
+
+.bio {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Projects Section Grid layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto layouts grid cells on space drops */
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--card-border);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.25);
+}
+
+.card-num {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 0.8rem;
+    background: linear-gradient(135deg, #4a90e2, #357ab8);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.7rem;
+    border-radius: 0.6rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.15);
+}
+
+.project-btn:hover {
+    transform: translateY(-0.15rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.project-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Interactive Form Box UI elements */
+.interactive-form {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 1.1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    outline: none;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+.input-group textarea { resize: none; }
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -0.5rem;
+    left: 0.8rem;
+    font-size: 0.75rem;
+    padding: 0 0.4rem;
+    background: #09090d;
+    color: #fff;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: rgba(255,255,255,0.35);
+}
+
+.submit-btn { width: 100%; }
+
+/* --- Tablet and Phone Media Query Intersections --- */
+
+@media (max-width: 1024px) {
+    .section { padding: 6rem 6%; }
+    .about-grid { gap: 2rem; }
+}
+
+@media (max-width: 768px) {
+    .navbar { padding: 1.2rem 6%; }
+    .nav-links { display: none; } /* Drops full nav strings on tiny mobile footprints */
+    
+    .section { 
+        padding: 6rem 4%; 
+        justify-content: center; /* Centers UI blocks on mobile screens */
+    }
+    
+    .about-grid { 
+        grid-template-columns: 1fr; /* Swaps profile grid into an easier column block pile */
+        gap: 2.5rem; 
+    }
+    
+    .photo-card {
+        max-width: 280px; /* Reduces container footprint slightly on smaller layouts */
+    }
+    
+    .content-box {
+        padding: 2rem 1.5rem; /* Shrinks container interior footprint padding safely */
+    }
+}
