@@ -1,23 +1,107 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Hitesh, student, class 10, coding, tech, personal website, Hitesh Shah, Nepal, Portfolio">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Hitesh Shah | Creative Developer, Software Engineer & Student Portfolio</title>
+    <meta name="title" content="Hitesh Shah | Creative Developer, Software Engineer & Student Portfolio">
+    <meta name="description" content="Explore the portfolio of Hitesh Shah, a creative developer and software engineering enthusiast from Nepal specializing in Python, Django, and 3D web architectures.">
+    <meta name="keywords" content="Hitesh Shah, Hitesh, portfolio, creative developer, software engineer, Python developer, Django, St. Xavier's College, Nepal, web developer">
+    <meta name="author" content="Hitesh Shah">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://hiteshhighest.me/">
 
-    <title>Hitesh Shah | Portfolio</title>
-
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'core/images/icon.png' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'core/images/icon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'core/images/icon.png' %}">
+
+    <!-- Open Graph / Facebook / LinkedIn / Discord -->
+    <meta property="og:site_name" content="Hitesh Shah Portfolio">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://hiteshhighest.me/">
+    <meta property="og:title" content="Hitesh Shah | Creative Developer & Portfolio">
+    <meta property="og:description" content="Official portfolio of Hitesh Shah, featuring projects like Mumukshu Labs, SEDS Loyola, and advanced web applications.">
+    <meta property="og:image" content="https://hiteshhighest.me/{% static 'core/images/image1.jpg' %}">
+    <meta property="og:image:alt" content="Hitesh Shah - Creative Developer">
+    <meta property="profile:first_name" content="Hitesh">
+    <meta property="profile:last_name" content="Shah">
+
+    <!-- Twitter Card SEO -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://hiteshhighest.me/">
+    <meta name="twitter:title" content="Hitesh Shah | Creative Developer & Portfolio">
+    <meta name="twitter:description" content="Official portfolio of Hitesh Shah, showcasing creative web design and full-stack software projects.">
+    <meta name="twitter:image" content="https://hiteshhighest.me/{% static 'core/images/image1.jpg' %}">
+
+    <!-- Comprehensive Schema.org Linked Graph (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://hiteshhighest.me/#website",
+          "url": "https://hiteshhighest.me/",
+          "name": "Hitesh Shah Portfolio",
+          "description": "Official personal website and portfolio of Hitesh Shah",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://hiteshhighest.me/#webpage",
+          "url": "https://hiteshhighest.me/",
+          "name": "Hitesh Shah | Creative Developer & Portfolio",
+          "isPartOf": { "@id": "https://hiteshhighest.me/#website" },
+          "about": { "@id": "https://hiteshhighest.me/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://hiteshhighest.me/#person",
+          "name": "Hitesh Shah",
+          "givenName": "Hitesh",
+          "familyName": "Shah",
+          "url": "https://hiteshhighest.me/",
+          "image": "https://hiteshhighest.me/{% static 'core/images/image1.jpg' %}",
+          "jobTitle": "Creative Developer & Software Engineer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance & Open Source"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "St. Xavier's College",
+            "sameAs": "https://www.sxc.edu.np/"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Nepal"
+          },
+          "sameAs": [
+            "https://github.com/hiteshhighest"
+          ],
+          "knowsAbout": ["Python", "Django", "Web Development", "JavaScript", "Software Engineering", "UI/UX Design"]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="{% static 'core/style.css' %}">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Preload Critical External Scripts for Performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    
+    <script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
 </head>
 <body>
     {% if success %}
-        <div class="success">
-            <div class="success-icon-wrapper">
+        <div class="success" role="alert" aria-live="polite">
+            <div class="success-icon-wrapper" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
@@ -27,21 +111,23 @@
     {% endif %}
 
     <!-- 3D WebGL Canvas Layer -->
-    <canvas id="webgl-canvas"></canvas>
+    <canvas id="webgl-canvas" aria-hidden="true"></canvas>
 
     <!-- Scrollable UI Overlay -->
     <main class="portfolio-container">
         
         <!-- Navigation -->
-        <nav class="navbar">
-            <div class="logo">H.</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
+        <header>
+            <nav class="navbar" aria-label="Main Navigation">
+                <div class="logo" aria-label="Hitesh Shah Logo">H.</div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#work">Work</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
 
         <!-- Hero Section -->
         <section id="home" class="section">
@@ -53,15 +139,14 @@
             </div>
         </section>
 
-        <!-- About Section (With Photo Placeholder) -->
+        <!-- About Section -->
         <section id="about" class="section">
             <div class="about-grid">
                 <!-- Interactive 3D Card for Photo -->
                 <div class="photo-card" id="photoCard">
                     <div class="photo-inner">
-                        <!-- REPLACE 'your-photo.jpg' WITH YOUR ACTUAL IMAGE PATH -->
-                        <img src="{% static 'core/images/image1.jpg' %}" alt="Hitesh Shah" class="profile-img">
-                        <div class="frame-glow"></div>
+                        <img src="{% static 'core/images/image1.jpg' %}" alt="Portrait photo of Hitesh Shah" class="profile-img" loading="lazy" width="400" height="400">
+                        <div class="frame-glow" aria-hidden="true"></div>
                     </div>
                 </div>
                 
@@ -71,10 +156,10 @@
                     <div class="info-list">
                         <div class="info-item">
                             <span class="label">College</span>
-                            <a class="val" target="_blank" style="cursor: pointer; text-decoration: none; color: #fff;" href="https://www.sxc.edu.np/">St. Xavier's College</a>
+                            <a class="val" target="_blank" rel="noopener noreferrer" style="cursor: pointer; text-decoration: none; color: #fff;" href="https://www.sxc.edu.np/">St. Xavier's College</a>
                         </div>
                         <div class="info-item">
-                            <span class="label">Level</span>
+                            <span class="label">Academics</span>
                             <span class="val">Cambridge AS Level (A Levels)</span>
                         </div>
                     </div>
@@ -90,29 +175,29 @@
             <div class="content-box wide-box" style="margin: 0 auto;">
                 <h2>Projects</h2>
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="card-num">01</div>
+                    <article class="project-card">
+                        <div class="card-num" aria-hidden="true">01</div>
                         <h3>Account System</h3>
                         <p>This project contains a website for signup / login system created using Django framework</p>
-                        <a href="https://github.com/hiteshhighest/account_system" target="_blank" class="project-btn">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-num">02</div>
+                        <a href="https://github.com/hiteshhighest/account_system" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Account System project on GitHub">View Project</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-num" aria-hidden="true">02</div>
                         <h3>Mumukshu Labs</h3>
                         <p>Developed the official Mumukshu Labs website using Django, Python, HTML, CSS, and JavaScript, creating a responsive platform to showcase the community.</p>
-                        <a href="https://labs.mumukshu.me/" target="_blank" class="project-btn">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-num">03</div>
+                        <a href="https://labs.mumukshu.me/" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Mumukshu Labs live project">View Project</a>
+                    </article>
+                    <article class="project-card">
+                        <div class="card-num" aria-hidden="true">03</div>
                         <h3>SEDS Loyola</h3>
                         <p>Developed the official SEDS Loyola website using Django, Python, HTML, CSS, and JavaScript, creating a responsive platform to showcase the community.</p>
-                        <a href="https://sedsloyola.vercel.app" target="_blank" class="project-btn">View Project</a>
-                    </div>
+                        <a href="https://sedsloyola.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View SEDS Loyola live project">View Project</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section with Interactive Form -->
+        <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="content-box form-box" style="margin: 0 auto;">
                 <h2 style="text-align: center;">Get In Touch</h2>
@@ -120,13 +205,13 @@
                 <form class="interactive-form" action="" method="post">
                     {% csrf_token %}
                     <div class="input-group">
-                        <input type="text" name="name" required placeholder="Name">
+                        <input type="text" name="name" required placeholder="Name" aria-label="Name">
                     </div>
                     <div class="input-group">
-                        <input type="email" name="email" required placeholder="Email">
+                        <input type="email" name="email" required placeholder="Email" aria-label="Email">
                     </div>
                     <div class="input-group">
-                        <textarea required name="message" rows="4" placeholder="Message"></textarea>
+                        <textarea required name="message" rows="4" placeholder="Message" aria-label="Message"></textarea>
                     </div>
                     <button type="submit" class="btn submit-btn">Message</button>
                 </form>
@@ -134,6 +219,6 @@
         </section>
     </main>
 
-    <script src="{% static 'core/script.js' %}"></script>
+    <script src="{% static 'core/script.js' %}" defer></script>
 </body>
 </html>
