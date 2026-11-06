@@ -4,15 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary SEO Meta Tags -->
-    <title>Hitesh Shah - Portfolio</title>
-    <meta name="title" content="Hitesh Shah | Portfolio">
-    <meta name="description" content="Explore the portfolio of Hitesh Shah, a creative developer and software engineering enthusiast from Nepal specializing in Python, Django, and 3D web architectures.">
-    <meta name="keywords" content="Hitesh Shah, Hitesh, portfolio, creative developer, software engineer, Python developer, Django, St. Xavier's College, Nepal, web developer">
+    <title>Hitesh Shah</title>
+    <meta name="title" content="Hitesh Shah — Creative Developer">
+    <meta name="description" content="Hitesh Shah is a Nepal-based creative developer building polished web experiences and practical software with Python, Django, JavaScript, and thoughtful UI design.">
+    <meta name="keywords" content="Hitesh Shah, Python developer Nepal, Django developer, creative developer, web developer, software engineer portfolio">
     <meta name="author" content="Hitesh Shah">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#2230d9">
+    <meta name="color-scheme" content="light">
     <link rel="canonical" href="https://hiteshhighest.me/">
+    <link rel="alternate" hreflang="en" href="https://hiteshhighest.me/">
+    <link rel="me" href="https://github.com/hiteshhighest">
 
     <!-- Favicon and App Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'core/images/icon.png' %}">
@@ -21,12 +27,16 @@
 
     <!-- Open Graph / Facebook / LinkedIn / Discord -->
     <meta property="og:site_name" content="Hitesh Shah Portfolio">
-    <meta property="og:type" content="profile">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://hiteshhighest.me/">
     <meta property="og:title" content="Hitesh Shah | Creative Developer & Portfolio">
-    <meta property="og:description" content="Official portfolio of Hitesh Shah, featuring projects like Mumukshu Labs, SEDS Loyola, and advanced web applications.">
-    <meta property="og:image" content="https://hiteshhighest.me/{% static 'core/images/image1.jpg' %}">
+    <meta property="og:description" content="Portfolio of Hitesh Shah, featuring projects like STEMforNepal, Klubb, SEDS Loyola, and a Django account system.">
+    <meta property="og:image" content="https://hiteshhighest.me{% static 'core/images/image1.jpg' %}">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt" content="Hitesh Shah - Creative Developer">
+    <meta property="og:locale" content="en_US">
     <meta property="profile:first_name" content="Hitesh">
     <meta property="profile:last_name" content="Shah">
 
@@ -34,45 +44,48 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://hiteshhighest.me/">
     <meta name="twitter:title" content="Hitesh Shah | Creative Developer & Portfolio">
-    <meta name="twitter:description" content="Official portfolio of Hitesh Shah, showcasing creative web design and full-stack software projects.">
-    <meta name="twitter:image" content="https://hiteshhighest.me/{% static 'core/images/image1.jpg' %}">
+    <meta name="twitter:description" content="Portfolio of Hitesh Shah, showcasing creative web design and full-stack software projects.">
+    <meta name="twitter:image" content="https://hiteshhighest.me{% static 'core/images/image1.jpg' %}">
+    <meta name="twitter:image:alt" content="Portrait of Hitesh Shah">
+    <meta name="twitter:creator" content="@hiteshhighest">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7074584968702743"
      crossorigin="anonymous"></script>
 
-    <!-- Comprehensive Schema.org Linked Graph (JSON-LD) -->
+    <!-- Schema.org Linked Graph (JSON-LD) -->
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
     "@graph": [
         {
         "@type": "WebSite",
-        "@id": "https://www.hiteshhighest.me/#website",
-        "url": "https://www.hiteshhighest.me/",
+        "@id": "https://hiteshhighest.me/#website",
+        "url": "https://hiteshhighest.me/",
         "name": "Hitesh Shah Portfolio",
         "description": "Official personal website and portfolio of Hitesh Shah",
         "inLanguage": "en"
         },
         {
         "@type": "ProfilePage",
-        "@id": "https://www.hiteshhighest.me/#webpage",
-        "url": "https://www.hiteshhighest.me/",
+        "@id": "https://hiteshhighest.me/#webpage",
+        "url": "https://hiteshhighest.me/",
         "name": "Hitesh Shah | Portfolio",
         "isPartOf": {
-            "@id": "https://www.hiteshhighest.me/#website"
+            "@id": "https://hiteshhighest.me/#website"
         },
         "mainEntity": {
-            "@id": "https://www.hiteshhighest.me/#person"
-        }
+            "@id": "https://hiteshhighest.me/#person"
+        },
+        "dateModified": "2026-10-30"
         },
         {
         "@type": "Person",
-        "@id": "https://www.hiteshhighest.me/#person",
+        "@id": "https://hiteshhighest.me/#person",
         "name": "Hitesh Shah",
         "givenName": "Hitesh",
         "familyName": "Shah",
-        "url": "https://www.hiteshhighest.me/",
-        "image": "https://www.hiteshhighest.me/{% static 'core/images/image1.jpg' %}",
+        "url": "https://hiteshhighest.me/",
+        "image": "https://hiteshhighest.me{% static 'core/images/image1.jpg' %}",
         "jobTitle": "Creative Developer & Software Engineer",
         "worksFor": {
             "@type": "Organization",
@@ -97,148 +110,1067 @@
             "JavaScript",
             "Software Engineering",
             "UI/UX Design"
+        ],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Creative Developer"
+        }
+        },
+        {
+        "@type": "ItemList",
+        "@id": "https://hiteshhighest.me/#projects",
+        "name": "Selected projects by Hitesh Shah",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Account System",
+                "url": "https://github.com/hiteshhighest/account_system"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "STEMforNepal",
+                "url": "https://stemfornepal.org"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Klubb",
+                "url": "https://myclub.hiteshhighest.me/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "SEDS Loyola",
+                "url": "https://sedsloyola.vercel.app"
+            }
         ]
         }
     ]
     }
     </script>
 
-    <!-- Stylesheets -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="{% static 'core/style.css' %}">
 
-    <!-- Preload Critical External Scripts for Performance -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-    
     <script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
 </head>
 <body>
+    <!-- Icon sprite -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </svg>
+
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     {% if success %}
-        <div class="success" role="alert" aria-live="polite">
-            <div class="success-icon-wrapper" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-            </div>
-            <span>Message successfully sent</span>
+        <div class="toast" role="status" aria-live="polite">
+            <span class="toast-icon" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span>
+            <span>Message sent. I’ll get back to you soon.</span>
         </div>
     {% endif %}
 
-    <!-- 3D WebGL Canvas Layer -->
-    <canvas id="webgl-canvas" aria-hidden="true"></canvas>
-
-    <!-- Scrollable UI Overlay -->
-    <main class="portfolio-container">
-        
-        <!-- Navigation -->
-        <header>
-            <nav class="navbar" aria-label="Main Navigation">
-                <div class="logo" aria-label="Hitesh Shah Logo">H.</div>
-                <div class="nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#work">Work</a>
-                    <a href="#contact">Contact</a>
-                </div>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="brand" href="#home" aria-label="Hitesh Shah, back to top">Hitesh Shah</a>
+            <nav class="nav" id="site-nav" aria-label="Main Navigation">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#lab">Lab</a>
+                <a class="nav-cta" href="#contact">Let’s talk</a>
             </nav>
-        </header>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        </div>
+    </header>
 
-        <!-- Hero Section -->
-        <section id="home" class="section">
-            <div class="content-box hero-box">
-                <span class="badge">Creative Developer & Designer</span>
-                <h1>Hitesh Shah</h1>
-                <p class="subtitle">Crafting immersive digital experiences and advanced web architectures.</p>
-                <a href="#about" class="btn">Explore Profile</a>
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <canvas class="hero-orbit" id="hero-orbit" aria-hidden="true"></canvas>
+            <div class="wrap hero-inner">
+                <h1 class="name" id="hero-title"><span class="line"><span>Hitesh</span></span> <span class="line"><span>Shah</span></span></h1>
+                <div class="hero-foot">
+                    <p class="status">Available for creative builds</p>
+                    <p class="hero-lede">I’m a creative developer from Nepal turning ambitious ideas into fast, expressive, and useful web experiences.</p>
+                    <a class="spot" href="#work"><span>See my work</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="about-grid">
-                <!-- Interactive 3D Card for Photo -->
-                <div class="photo-card" id="photoCard">
-                    <div class="photo-inner">
-                        <img src="{% static 'core/images/image1.jpg' %}" alt="Portrait photo of Hitesh Shah" class="profile-img" loading="lazy" width="400" height="400">
-                        <div class="frame-glow" aria-hidden="true"></div>
+        <!-- About -->
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="wrap about-grid">
+                <figure class="photo">
+                    <img src="{% static 'core/images/image1.jpg' %}" alt="Portrait photo of Hitesh Shah" loading="eager" fetchpriority="high" width="400" height="400">
+                </figure>
+                <div class="about-body">
+                    <h2 id="about-title">Curious by nature. Builder by choice.</h2>
+                    <p class="bio">I am an AS Level student aiming for a strong academic foundation alongside building practical experience in programming and problem solving. I am interested in AI and software development, with a focus on turning concepts into real-world applications.</p>
+                    <dl class="facts">
+                        <div><dt>College</dt><dd><a target="_blank" rel="noopener noreferrer" href="https://www.sxc.edu.np/">St. Xavier's College</a></dd></div>
+                        <div><dt>Studying</dt><dd>Cambridge AS Level (A Levels)</dd></div>
+                        <div><dt>Interested in</dt><dd>AI and software development</dd></div>
+                        <div><dt>Works with</dt><dd>Python, Django, JavaScript, creative UI</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work -->
+        <section class="work" id="work" aria-labelledby="work-title">
+            <div class="wrap">
+                <div class="work-head">
+                    <h2 id="work-title">Selected work</h2>
+                    <p>Platforms, experiments, and products built to solve real problems.</p>
+                </div>
+                <ul class="projects">
+                    <li class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                        <a class="project-link" href="https://github.com/hiteshhighest/account_system" target="_blank" rel="noopener noreferrer" aria-label="View Account System on GitHub (opens in a new tab)">
+                            <div class="project-main">
+                                <h3 itemprop="name">Account System</h3>
+                                <p class="project-tags">Django, authentication</p>
+                            </div>
+                            <p class="project-desc" itemprop="description">A secure signup and login system built with the Django framework.</p>
+                            <span class="project-go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
+                        </a>
+                    </li>
+                    <li class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                        <a class="project-link" href="https://stemfornepal.org" target="_blank" rel="noopener noreferrer" aria-label="Visit STEMforNepal (opens in a new tab)">
+                            <div class="project-main">
+                                <h3 itemprop="name">STEMforNepal</h3>
+                                <p class="project-tags">Community, web</p>
+                            </div>
+                            <p class="project-desc" itemprop="description">A community platform designed to make STEM opportunities and events more accessible.</p>
+                            <span class="project-go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
+                        </a>
+                    </li>
+                    <li class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                        <a class="project-link" href="https://myclub.hiteshhighest.me/" target="_blank" rel="noopener noreferrer" aria-label="Visit Klubb (opens in a new tab)">
+                            <div class="project-main">
+                                <h3 itemprop="name">Klubb</h3>
+                                <p class="project-tags">Platform, product</p>
+                            </div>
+                            <p class="project-desc" itemprop="description">A platform for clubs and organizations to share events and announcements.</p>
+                            <span class="project-go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
+                        </a>
+                    </li>
+                    <li class="project" itemscope itemtype="https://schema.org/CreativeWork">
+                        <a class="project-link" href="https://sedsloyola.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit SEDS Loyola (opens in a new tab)">
+                            <div class="project-main">
+                                <h3 itemprop="name">SEDS Loyola</h3>
+                                <p class="project-tags">Django, education</p>
+                            </div>
+                            <p class="project-desc" itemprop="description">A responsive organization website built with Django, Python, HTML, CSS, and JavaScript.</p>
+                            <span class="project-go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Interactive lab -->
+        <section class="lab" id="lab" aria-labelledby="lab-title">
+            <div class="wrap lab-grid">
+                <div class="lab-copy">
+                    <p class="eyebrow">Interactive lab / 001</p>
+                    <h2 id="lab-title">Play the prototype.</h2>
+                    <p id="lab-description">Move through the field and collect five signals before the clock runs out. A tiny experiment in motion, focus, and fun.</p>
+                    <div class="game-modes" role="group" aria-label="Choose a game mode">
+                        <button class="mode-button is-active" type="button" data-game-mode="signal" aria-pressed="true">Signal Catch</button>
+                        <button class="mode-button" type="button" data-game-mode="jumper" aria-pressed="false">Jumper</button>
                     </div>
-                </div>
-                
-                <!-- Info Box -->
-                <div class="content-box">
-                    <h2>Academic & Profile</h2>
-                    <div class="info-list">
-                        <div class="info-item">
-                            <span class="label">College</span>
-                            <a class="val" target="_blank" rel="noopener noreferrer" style="cursor: pointer; text-decoration: none; color: #fff;" href="https://www.sxc.edu.np/">St. Xavier's College</a>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Academics</span>
-                            <span class="val">Cambridge AS Level (A Levels)</span>
-                        </div>
+                    <div class="lab-meta" aria-live="polite">
+                        <span><strong id="signal-score">0</strong> / 5 caught</span>
+                        <span><strong id="signal-time">20</strong>s left</span>
                     </div>
-                    <p class="bio">
-                        I am an AS Level student aiming for a strong academic foundation alongside building practical experience in programming and problem solving. I am interested in AI and Software Development with a focus on turning concepts into real world applications.
-                    </p>
+                    <button class="lab-button" id="signal-start" type="button">Start experiment</button>
+                </div>
+                <div class="signal-console">
+                    <canvas id="signal-game" width="720" height="460" tabindex="0" aria-label="Signal Catch game area"></canvas>
+                    <p class="console-hint" id="signal-status">Press start when you’re ready.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Work Section -->
-        <section id="work" class="section">
-            <div class="content-box wide-box" style="margin: 0 auto;">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="card-num" aria-hidden="true">01</div>
-                        <h3>Account System</h3>
-                        <p>This project contains a website for signup / login system created using Django framework</p>
-                        <a href="https://github.com/hiteshhighest/account_system" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Account System project on GitHub">View Project</a>
-                    </article>
-                    <article class="project-card">
-                        <div class="card-num" aria-hidden="true">02</div>
-                        <h3>STEMforNepal</h3>
-                        <p>Developed the official SEDS Loyola website using Django, Python, HTML, CSS, and JavaScript, creating a responsive platform to showcase the community.</p>
-                        <a href="https://stemfornepal.org" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View SEDS Loyola live project">View Project</a>
-                    </article>
-                    <article class="project-card">
-                        <div class="card-num" aria-hidden="true">03</div>
-                        <h3>Klubb</h3>
-                        <p>Founded, designed and developed a platform for clubs and organizations to announce events and announcements.</p>
-                        <a href="https://myclub.hiteshhighest.me/" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View Mumukshu Labs live project">View Project</a>
-                    </article>
-                    <article class="project-card">
-                        <div class="card-num" aria-hidden="true">04</div>
-                        <h3>SEDS Loyola</h3>
-                        <p>Developed the official SEDS Loyola website using Django, Python, HTML, CSS, and JavaScript, creating a responsive platform to showcase the community.</p>
-                        <a href="https://sedsloyola.vercel.app" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="View SEDS Loyola live project">View Project</a>
-                    </article>
+        <!-- Contact -->
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="wrap contact-grid">
+                <div class="contact-copy">
+                    <h2 id="contact-title"><span>Have a good idea?</span> <span>Let’s make it real.</span></h2>
+                    <p>Have an idea or a project in mind? Send a message and let’s start a conversation.</p>
+                    <p class="contact-note" id="time-note" hidden>I’m in Nepal (UTC+5:45), where it’s <time id="nepal-time"></time> right now.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="content-box form-box" style="margin: 0 auto;">
-                <h2 style="text-align: center;">Get In Touch</h2>
-                <p style="text-align: center;">Have an idea or a project in mind? Drop a message below.</p>
-                <form class="interactive-form" action="" method="post">
+                <form class="form" action="{% url 'home' %}" method="post">
                     {% csrf_token %}
-                    <div class="input-group">
-                        <input type="text" name="name" required placeholder="Name" aria-label="Name">
+                    <div class="field">
+                        <label for="contact-name">Name</label>
+                        <input id="contact-name" type="text" name="name" required placeholder="Alex Morgan" autocomplete="name">
                     </div>
-                    <div class="input-group">
-                        <input type="email" name="email" required placeholder="Email" aria-label="Email">
+                    <div class="field">
+                        <label for="contact-email">Email</label>
+                        <input id="contact-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email">
                     </div>
-                    <div class="input-group">
-                        <textarea required name="message" rows="4" placeholder="Message" aria-label="Message"></textarea>
+                    <div class="field">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" required name="message" rows="4" placeholder="Tell me a little about your idea"></textarea>
                     </div>
-                    <button type="submit" class="btn submit-btn">Message</button>
+                    <button type="submit" class="btn"><span class="btn-label">Send message</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
                 </form>
             </div>
         </section>
     </main>
 
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p class="footer-name">Hitesh Shah <span>Creative developer</span></p>
+            <div class="footer-links">
+                <a href="https://github.com/hiteshhighest" target="_blank" rel="me noopener noreferrer">GitHub</a>
+                <a href="#home">Back to top</a>
+            </div>
+            <p class="footer-note">© 2026 Hitesh Shah</p>
+        </div>
+    </footer>
+
+    
+    <!-- Hitesh AI Chatbot -->
+    <div id="hitesh-ai">
+
+        <!-- Floating button -->
+        <button id="ai-chat-toggle" aria-label="Open Hitesh AI" aria-expanded="false">
+            <img src="{% static 'core/images/ai.png' %}" alt="">
+            <span class="ai-online-dot"></span>
+        </button>
+
+        <!-- Chat window -->
+        <section id="ai-chat-window" class="ai-hidden" aria-label="Hitesh AI chat">
+
+            <!-- Header -->
+            <header class="ai-header">
+                <div class="ai-brand">
+                    <div class="ai-avatar">
+                        <img src="{% static 'core/images/ai.png' %}" alt="Hitesh AI logo">
+                        <span class="ai-online-dot"></span>
+                    </div>
+
+                    <div class="ai-brand-info">
+                        <strong>Hitesh AI</strong>
+                        <span><i></i> Your portfolio assistant</span>
+                    </div>
+                </div>
+
+                <div class="ai-header-actions">
+                    <button id="ai-new-chat" aria-label="New conversation" title="New conversation">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M20 11a8 8 0 1 1-2.34-5.66L20 7.5M20 3v4.5h-4.5"
+                                stroke="currentColor" stroke-width="1.7"
+                                stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button id="ai-close" aria-label="Close chat" title="Close">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="m18 6-12 12M6 6l12 12"
+                                stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Messages -->
+            <div id="ai-messages" aria-live="polite" aria-label="Conversation">
+
+                <div class="ai-welcome">
+                    <div class="ai-welcome-icon">
+                        <img src="{% static 'core/images/ai.png' %}" alt="Hitesh AI logo">
+                    </div>
+
+                    <span class="ai-eyebrow">HITESH / PORTFOLIO GUIDE</span>
+
+                    <h3>What can I show you?</h3>
+
+                    <p>
+                        Ask about Hitesh's work, skills, projects, or the ideas
+                        behind this portfolio.
+                    </p>
+
+                    <span class="ai-welcome-hint">Choose a prompt or write your own.</span>
+                </div>
+
+            </div>
+
+            <!-- Suggestions -->
+            <div class="ai-suggestions">
+                <button data-question="Tell me about Hitesh.">About Hitesh <span>↗</span></button>
+                <button data-question="What projects has Hitesh developed?">His projects <span>↗</span></button>
+                <button data-question="What are Hitesh's technical skills?">Technical skills <span>↗</span></button>
+            </div>
+
+            <!-- Input -->
+            <form id="ai-chat-form">
+                <div class="ai-input-wrap">
+                    <input
+                        id="ai-user-input"
+                        type="text"
+                        placeholder="Ask me anything..."
+                        autocomplete="off"
+                        maxlength="4000"
+                        aria-label="Your message"
+                        required
+                    >
+
+                    <button type="submit" aria-label="Send message">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M13 5l7 7-7 7"
+                                stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+
+            <footer class="ai-footer">
+                <span>Portfolio guide by <strong>Hitesh</strong></span>
+                <span>Built with curiosity.</span>
+            </footer>
+
+        </section>
+    </div>
+
+    <style>
+    /* =========================================
+    HITESH AI — PORTFOLIO CHAT WIDGET
+    ========================================= */
+
+    #hitesh-ai {
+        --ai-blue: #2230d9;
+        --ai-blue-dark: #1924b8;
+        --ai-ink: #0b1240;
+        --ai-text: #20264d;
+        --ai-muted: #68708f;
+        --ai-border: rgba(11, 18, 64, .14);
+        --ai-surface: #f6f7fb;
+        --ai-yellow: #ffc21a;
+
+        font-family: 'Bricolage Grotesque', sans-serif;
+        position: relative;
+        z-index: 99999;
+    }
+
+    #hitesh-ai *,
+    #hitesh-ai *::before,
+    #hitesh-ai *::after {
+        box-sizing: border-box;
+    }
+
+    /* Floating button */
+
+    #ai-chat-toggle {
+        position: fixed;
+        right: 28px;
+        bottom: 28px;
+        width: 62px;
+        height: 62px;
+        border: 3px solid var(--ai-yellow);
+        border-radius: 50%;
+        background: var(--ai-ink);
+        padding: 5px;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(11,18,64,.28);
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    #ai-chat-toggle:hover {
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 14px 36px rgba(11,18,64,.34);
+    }
+
+    #ai-chat-toggle img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .ai-online-dot {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #20c77a;
+        border: 2px solid var(--ai-ink);
+        border-radius: 50%;
+        right: 1px;
+        bottom: 2px;
+    }
+
+    /* Main window */
+
+    #ai-chat-window {
+        position: fixed;
+        right: 28px;
+        bottom: 105px;
+
+        width: 390px;
+        height: 590px;
+        max-width: calc(100vw - 32px);
+        max-height: calc(100dvh - 130px);
+
+        display: flex;
+        flex-direction: column;
+
+        background: var(--ai-surface);
+        color: var(--ai-text);
+
+        border: 1px solid var(--ai-border);
+        border-radius: 20px;
+        overflow: hidden;
+
+        box-shadow:
+            0 25px 80px rgba(11,18,64,.18),
+            0 5px 20px rgba(11,18,64,.06);
+
+        transform-origin: bottom right;
+        animation: ai-appear .25s ease;
+    }
+
+    #ai-chat-window.ai-hidden {
+        display: none;
+    }
+
+    @keyframes ai-appear {
+        from {
+            opacity: 0;
+            transform: translateY(12px) scale(.97);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    /* Header */
+
+    .ai-header {
+        min-height: 78px;
+        padding: 15px 19px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        color: #fff;
+        background: var(--ai-ink);
+        border-bottom: 3px solid var(--ai-yellow);
+    }
+
+    .ai-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .ai-avatar {
+        position: relative;
+        width: 43px;
+        height: 43px;
+        border-radius: 14px;
+        background: rgba(255,255,255,.12);
+        padding: 4px;
+    }
+
+    .ai-avatar img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .ai-brand-info strong {
+        display: block;
+        font-size: 16px;
+        font-weight: 750;
+        letter-spacing: -.4px;
+    }
+
+    .ai-brand-info span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 3px;
+        font-size: 11px;
+        color: rgba(255,255,255,.68);
+    }
+
+    .ai-brand-info span i {
+        width: 6px;
+        height: 6px;
+        background: #20c77a;
+        border-radius: 50%;
+    }
+
+    .ai-header-actions {
+        display: flex;
+        gap: 5px;
+    }
+
+    .ai-header-actions button {
+        display: grid;
+        place-items: center;
+
+        width: 35px;
+        height: 35px;
+
+        border: 0;
+        border-radius: 10px;
+        background: transparent;
+        color: rgba(255,255,255,.72);
+
+        cursor: pointer;
+        transition: background .2s, color .2s;
+    }
+
+    .ai-header-actions button:hover {
+        background: rgba(255,255,255,.12);
+        color: var(--ai-yellow);
+    }
+
+    .ai-header-actions svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Messages */
+
+    #ai-messages {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+
+        padding: 20px 17px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        background: var(--ai-surface);
+        scroll-behavior: smooth;
+    }
+
+    #ai-messages::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    #ai-messages::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 10px;
+    }
+
+    /* Welcome screen */
+
+    .ai-welcome {
+        margin: auto 0;
+        padding: 15px 8px;
+        text-align: center;
+    }
+
+    .ai-welcome-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 18px;
+        padding: 7px;
+
+        background: var(--ai-yellow);
+        border-radius: 20px;
+    }
+
+    .ai-welcome-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 14px;
+    }
+
+    .ai-eyebrow {
+        display: block;
+        color: var(--ai-blue);
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+    }
+
+    .ai-welcome h3 {
+        margin: 0 0 9px;
+        font-size: 29px;
+        font-weight: 800;
+        letter-spacing: -1.3px;
+    }
+
+    .ai-welcome p {
+        max-width: 270px;
+        margin: 0 auto;
+        color: var(--ai-muted);
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .ai-welcome-hint {
+        display: block;
+        margin-top: 17px;
+        color: var(--ai-muted);
+        font-size: 11px;
+    }
+
+    /* Message bubbles */
+
+    .ai-message {
+        max-width: 87%;
+        padding: 12px 15px;
+        border-radius: 15px;
+
+        font-size: 13px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+        white-space: pre-wrap;
+    }
+
+    .ai-bot {
+        align-self: flex-start;
+        color: var(--ai-text);
+        background: #fff;
+        border: 1px solid var(--ai-border);
+        border-bottom-left-radius: 5px;
+    }
+
+    .ai-user {
+        align-self: flex-end;
+        color: #fff;
+        background: var(--ai-blue);
+        border-bottom-right-radius: 5px;
+    }
+
+    .ai-message strong {
+        font-weight: 800;
+        color: inherit;
+    }
+
+    .ai-message em {
+        font-style: italic;
+    }
+
+    .ai-message ul {
+        margin: 7px 0;
+        padding-left: 18px;
+    }
+
+    .ai-message li {
+        margin: 3px 0;
+    }
+
+    /* Typing animation */
+
+    .ai-typing {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        min-width: 55px;
+    }
+
+    .ai-typing span {
+        width: 6px;
+        height: 6px;
+        background: #999;
+        border-radius: 50%;
+        animation: ai-bounce .9s infinite ease-in-out;
+    }
+
+    .ai-typing span:nth-child(2) {
+        animation-delay: .15s;
+    }
+
+    .ai-typing span:nth-child(3) {
+        animation-delay: .3s;
+    }
+
+    @keyframes ai-bounce {
+        0%, 60%, 100% {
+            transform: translateY(0);
+        }
+        30% {
+            transform: translateY(-5px);
+        }
+    }
+
+    /* Suggestions */
+
+    .ai-suggestions {
+        display: flex;
+        gap: 7px;
+        padding: 12px 14px;
+        overflow-x: auto;
+
+        border-top: 1px solid var(--ai-border);
+        scrollbar-width: none;
+    }
+
+    .ai-suggestions::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ai-suggestions button {
+        flex-shrink: 0;
+        padding: 8px 11px;
+
+        border: 1px solid var(--ai-border);
+        border-radius: 30px;
+
+        background: #fff;
+        color: var(--ai-ink);
+        font-family: inherit;
+        font-size: 10px;
+        font-weight: 650;
+
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    .ai-suggestions button:hover {
+        border-color: var(--ai-yellow);
+        color: var(--ai-blue);
+        background: #fffaf0;
+    }
+
+    .ai-suggestions button span {
+        margin-left: 3px;
+        color: var(--ai-blue);
+    }
+
+    /* Input */
+
+    #ai-chat-form {
+        padding: 0 14px 12px;
+    }
+
+    .ai-input-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 6px;
+        border: 1px solid var(--ai-border);
+        border-radius: 13px;
+
+        background: #fff;
+        transition: border-color .2s, box-shadow .2s;
+    }
+
+    .ai-input-wrap:focus-within {
+        border-color: var(--ai-blue);
+        box-shadow: 0 0 0 3px rgba(34,48,217,.08);
+    }
+
+    #ai-user-input {
+        flex: 1;
+        min-width: 0;
+        padding: 9px 8px;
+
+        border: none;
+        outline: none;
+        background: transparent;
+
+        font-family: inherit;
+        font-size: 13px;
+        color: var(--ai-text);
+    }
+
+    #ai-user-input::placeholder {
+        color: #aaa;
+    }
+
+    #ai-user-input:disabled {
+        opacity: .6;
+    }
+
+    #ai-chat-form button {
+        display: grid;
+        place-items: center;
+
+        width: 38px;
+        height: 38px;
+
+        border: 0;
+        border-radius: 10px;
+
+        background: var(--ai-yellow);
+        color: var(--ai-ink);
+
+        cursor: pointer;
+        transition: background .2s, transform .2s;
+    }
+
+    #ai-chat-form button:hover {
+        background: #fff;
+        transform: translateX(2px);
+    }
+
+    #ai-chat-form button svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    /* Footer */
+
+    .ai-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 18px 13px;
+
+        color: var(--ai-muted);
+        font-size: 9px;
+    }
+
+    .ai-footer strong {
+        color: var(--ai-blue);
+    }
+
+    #hitesh-ai button:focus-visible,
+    #hitesh-ai input:focus-visible {
+        outline: 3px solid var(--ai-yellow);
+        outline-offset: 3px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 480px) {
+        #ai-chat-toggle {
+            right: 18px;
+            bottom: 18px;
+            width: 57px;
+            height: 57px;
+        }
+
+        #ai-chat-window {
+            right: 10px;
+            bottom: 86px;
+
+            width: calc(100vw - 20px);
+            height: min(620px, calc(100dvh - 105px));
+            max-width: none;
+
+            border-radius: 19px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        #hitesh-ai *,
+        #hitesh-ai *::before,
+        #hitesh-ai *::after {
+            animation-duration: .01ms !important;
+            transition-duration: .01ms !important;
+        }
+    }
+    </style>
+
+    <script>
+    (() => {
+        const API_URL = "https://hitesh-ai.hiteshhighest122.workers.dev/";
+
+        const toggle = document.getElementById("ai-chat-toggle");
+        const windowEl = document.getElementById("ai-chat-window");
+        const close = document.getElementById("ai-close");
+        const newChat = document.getElementById("ai-new-chat");
+        const messagesEl = document.getElementById("ai-messages");
+        const form = document.getElementById("ai-chat-form");
+        const input = document.getElementById("ai-user-input");
+        const suggestions = document.querySelectorAll(".ai-suggestions button");
+
+        let conversation = [];
+        let sending = false;
+
+        // Safely render bold and italic Markdown.
+        function renderFormattedText(element, text) {
+            const pattern = /(\*\*[^*]+\*\*|\*[^*]+\*)/g;
+            const parts = text.split(pattern);
+
+            parts.forEach(part => {
+                if (part.startsWith("**") && part.endsWith("**")) {
+                    const strong = document.createElement("strong");
+                    strong.textContent = part.slice(2, -2);
+                    element.appendChild(strong);
+                } else if (part.startsWith("*") && part.endsWith("*")) {
+                    const italic = document.createElement("em");
+                    italic.textContent = part.slice(1, -1);
+                    element.appendChild(italic);
+                } else {
+                    element.appendChild(document.createTextNode(part));
+                }
+            });
+        }
+
+        function addMessage(content, type) {
+            const message = document.createElement("div");
+            message.className = `ai-message ${type}`;
+
+            if (type === "ai-bot") {
+                content.split("\n").forEach((line, index) => {
+                    if (index > 0) {
+                        message.appendChild(document.createElement("br"));
+                    }
+
+                    const bullet = line.match(/^\s*[*-]\s+(.*)$/);
+
+                    if (bullet) {
+                        message.appendChild(document.createTextNode("• "));
+                        renderFormattedText(message, bullet[1]);
+                    } else {
+                        renderFormattedText(message, line);
+                    }
+                });
+            } else {
+                message.textContent = content;
+            }
+
+            messagesEl.appendChild(message);
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+
+            return message;
+        }
+
+        function addTyping() {
+            const typing = document.createElement("div");
+            typing.className = "ai-message ai-bot ai-typing";
+
+            for (let i = 0; i < 3; i++) {
+                typing.appendChild(document.createElement("span"));
+            }
+
+            messagesEl.appendChild(typing);
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+
+            return typing;
+        }
+
+        function resetWelcome() {
+            messagesEl.innerHTML = `
+                <div class="ai-welcome">
+                    <div class="ai-welcome-icon">
+                        <img src="{% static 'core/images/ai.png' %}" alt="">
+                    </div>
+                    <span class="ai-eyebrow">PERSONAL AI ASSISTANT</span>
+                    <h3>Hey there.</h3>
+                    <p>I'm Hitesh AI. I can tell you about Hitesh's background, projects, technical skills and interests.</p>
+                    <span class="ai-welcome-hint">What would you like to know?</span>
+                </div>
+            `;
+        }
+
+        async function sendMessage(text) {
+            if (sending || !text.trim()) return;
+
+            sending = true;
+            input.disabled = true;
+
+            addMessage(text, "ai-user");
+
+            conversation.push({
+                role: "user",
+                content: text
+            });
+
+            const typing = addTyping();
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        messages: conversation.slice(-10)
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok || !data.answer) {
+                    throw new Error(data.error || "Unable to get a response.");
+                }
+
+                typing.remove();
+
+                conversation.push({
+                    role: "assistant",
+                    content: data.answer
+                });
+
+                addMessage(data.answer, "ai-bot");
+
+            } catch (error) {
+                typing.remove();
+
+                addMessage(
+                    "Sorry, I couldn't connect just now. Please try again.",
+                    "ai-bot"
+                );
+
+                conversation.pop();
+                console.error("Hitesh AI error:", error);
+
+            } finally {
+                sending = false;
+                input.disabled = false;
+                input.focus();
+            }
+        }
+
+        toggle.addEventListener("click", () => {
+            const isOpen = !windowEl.classList.contains("ai-hidden");
+
+            windowEl.classList.toggle("ai-hidden");
+            toggle.setAttribute("aria-expanded", String(!isOpen));
+
+            if (!isOpen) input.focus();
+        });
+
+        close.addEventListener("click", () => {
+            windowEl.classList.add("ai-hidden");
+            toggle.setAttribute("aria-expanded", "false");
+        });
+
+        newChat.addEventListener("click", () => {
+            conversation = [];
+            resetWelcome();
+        });
+
+        form.addEventListener("submit", async event => {
+            event.preventDefault();
+
+            const text = input.value.trim();
+            if (!text || sending) return;
+
+            input.value = "";
+            await sendMessage(text);
+        });
+
+        suggestions.forEach(button => {
+            button.addEventListener("click", () => {
+                if (!sending) sendMessage(button.dataset.question);
+            });
+        });
+    })();
+    </script>
+    <!-- End Hitesh AI Chatbot -->
+
+    
     <script src="{% static 'core/script.js' %}" defer></script>
 </body>
 </html>
