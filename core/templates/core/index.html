@@ -402,16 +402,9 @@
                         behind this portfolio.
                     </p>
 
-                    <span class="ai-welcome-hint">Choose a prompt or write your own.</span>
+                    <span class="ai-welcome-hint">Write a question to get started.</span>
                 </div>
 
-            </div>
-
-            <!-- Suggestions -->
-            <div class="ai-suggestions">
-                <button data-question="Tell me about Hitesh.">About Hitesh <span>↗</span></button>
-                <button data-question="What projects has Hitesh developed?">His projects <span>↗</span></button>
-                <button data-question="What are Hitesh's technical skills?">Technical skills <span>↗</span></button>
             </div>
 
             <!-- Input -->
@@ -453,7 +446,7 @@
     #hitesh-ai {
         --ai-blue: #2230d9;
         --ai-blue-dark: #1924b8;
-        --ai-ink: #0b1240;
+        --ai-ink: #2331D4;
         --ai-text: #20264d;
         --ai-muted: #68708f;
         --ai-border: rgba(11, 18, 64, .14);
@@ -810,50 +803,6 @@
         }
     }
 
-    /* Suggestions */
-
-    .ai-suggestions {
-        display: flex;
-        gap: 7px;
-        padding: 12px 14px;
-        overflow-x: auto;
-
-        border-top: 1px solid var(--ai-border);
-        scrollbar-width: none;
-    }
-
-    .ai-suggestions::-webkit-scrollbar {
-        display: none;
-    }
-
-    .ai-suggestions button {
-        flex-shrink: 0;
-        padding: 8px 11px;
-
-        border: 1px solid var(--ai-border);
-        border-radius: 30px;
-
-        background: #fff;
-        color: var(--ai-ink);
-        font-family: inherit;
-        font-size: 10px;
-        font-weight: 650;
-
-        cursor: pointer;
-        transition: .2s;
-    }
-
-    .ai-suggestions button:hover {
-        border-color: var(--ai-yellow);
-        color: var(--ai-blue);
-        background: #fffaf0;
-    }
-
-    .ai-suggestions button span {
-        margin-left: 3px;
-        color: var(--ai-blue);
-    }
-
     /* Input */
 
     #ai-chat-form {
@@ -991,8 +940,6 @@
         const messagesEl = document.getElementById("ai-messages");
         const form = document.getElementById("ai-chat-form");
         const input = document.getElementById("ai-user-input");
-        const suggestions = document.querySelectorAll(".ai-suggestions button");
-
         let conversation = [];
         let sending = false;
 
@@ -1161,11 +1108,6 @@
             await sendMessage(text);
         });
 
-        suggestions.forEach(button => {
-            button.addEventListener("click", () => {
-                if (!sending) sendMessage(button.dataset.question);
-            });
-        });
     })();
     </script>
     <!-- End Hitesh AI Chatbot -->
