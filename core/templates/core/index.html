@@ -437,12 +437,9 @@
 
         </section>
     </div>
-
+    
+    <!-- AI Chat -->
     <style>
-    /* =========================================
-    HITESH AI — PORTFOLIO CHAT WIDGET
-    ========================================= */
-
     #hitesh-ai {
         --ai-blue: #2230d9;
         --ai-blue-dark: #1924b8;
@@ -760,6 +757,37 @@
         font-style: italic;
     }
 
+    /* Markdown headings */
+
+    .ai-message h1,
+    .ai-message h2,
+    .ai-message h3,
+    .ai-message h4,
+    .ai-message h5,
+    .ai-message h6 {
+        margin: 12px 0 6px;
+        color: var(--ai-ink);
+        font-weight: 800;
+        line-height: 1.3;
+        white-space: normal;
+    }
+
+    .ai-message h1 { font-size: 21px; }
+    .ai-message h2 { font-size: 19px; }
+    .ai-message h3 { font-size: 17px; }
+    .ai-message h4 { font-size: 15px; }
+    .ai-message h5 { font-size: 14px; }
+    .ai-message h6 { font-size: 13px; }
+
+    .ai-message h1:first-child,
+    .ai-message h2:first-child,
+    .ai-message h3:first-child,
+    .ai-message h4:first-child,
+    .ai-message h5:first-child,
+    .ai-message h6:first-child {
+        margin-top: 0;
+    }
+
     .ai-message ul {
         margin: 7px 0;
         padding-left: 18px;
@@ -940,6 +968,7 @@
         const messagesEl = document.getElementById("ai-messages");
         const form = document.getElementById("ai-chat-form");
         const input = document.getElementById("ai-user-input");
+
         let conversation = [];
         let sending = false;
 
@@ -963,25 +992,50 @@
             });
         }
 
+        // Render bot messages with basic Markdown support.
         function addMessage(content, type) {
             const message = document.createElement("div");
             message.className = `ai-message ${type}`;
 
             if (type === "ai-bot") {
-                content.split("\n").forEach((line, index) => {
-                    if (index > 0) {
-                        message.appendChild(document.createElement("br"));
+                content.split("\n").forEach(line => {
+                    const trimmed = line.trim();
+
+                    // Markdown headings (# to ######)
+                    const heading = trimmed.match(/^(#{1,6})\s+(.+)$/);
+
+                    if (heading) {
+                        const level = heading[1].length;
+                        const headingEl = document.createElement(`h${level}`);
+
+                        renderFormattedText(headingEl, heading[2]);
+                        message.appendChild(headingEl);
+                        return;
                     }
 
+                    // Bullet points
                     const bullet = line.match(/^\s*[*-]\s+(.*)$/);
 
                     if (bullet) {
-                        message.appendChild(document.createTextNode("• "));
-                        renderFormattedText(message, bullet[1]);
-                    } else {
-                        renderFormattedText(message, line);
+                        const listItem = document.createElement("div");
+                        listItem.style.paddingLeft = "8px";
+
+                        listItem.appendChild(document.createTextNode("• "));
+                        renderFormattedText(listItem, bullet[1]);
+
+                        message.appendChild(listItem);
+                        return;
                     }
+
+                    // Normal text
+                    renderFormattedText(message, line);
+                    message.appendChild(document.createElement("br"));
                 });
+
+                // Remove unnecessary final line break.
+                if (message.lastChild?.tagName === "BR") {
+                    message.removeChild(message.lastChild);
+                }
             } else {
                 message.textContent = content;
             }
@@ -1110,8 +1164,7 @@
 
     })();
     </script>
-    <!-- End Hitesh AI Chatbot -->
-
+    <!-- End of AI Chat -->
     
     <script src="{% static 'core/script.js' %}" defer></script>
 </body>
